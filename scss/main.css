@@ -12030,4 +12030,10 @@ p {
   justify-content: space-between;
   opacity: 0;
   transition: all 0.3s;
+}
+
+.all-reservations a {
+  display: block;
+  color: #292222;
+  padding: 10px;
 }/*# sourceMappingURL=main.css.map */
