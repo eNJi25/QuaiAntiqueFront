@@ -56,8 +56,85 @@
             </select>
         </div>
         <div class="text-center mb-3">
-            <button type="submit" class="btn btn-primary text-white">Valider ma réservation</button>
-            <button type="button" class="btn btn-danger text-white">Annuler</button>
+            <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal"
+                data-bs-target="#ValidationReservationModal">Valider ma réservation</button>
+            <button type="button" class="btn btn-danger text-white" data-bs-toggle="modal"
+                data-bs-target="#AnnulationReservationModal">Annuler</button>
         </div>
     </form>
+</div>
+
+<!-- Modal confirmation réservation -->
+
+<div class="modal fade" id="ValidationReservationModal" tabindex="-1" aria-labelledby="ValidationReservationModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="ValidationReservationModal">Confirmation de réservation</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="DateReservationInput" class="form-label text-primary">Date : </label>
+                        <input disabled type="text" class="form-control" id="DateReservationInput"
+                            placeholder="09/11/2015">
+                    </div>
+                    <div class="mb-3">
+                        <label for="HeureReservation" class="form-label text-primary">Heure : </label>
+                        <input disabled type="text" class="form-control" id="HeureReservation" placeholder="12:00">
+                    </div>
+                    <div class="mb-3">
+                        <label for="AllergieReservation" class="form-label text-primary">Allergie : </label>
+                        <input disabled type="number" class="form-control" id="AllergieReservation"
+                            placeholder="Pas d'allergie">
+                    </div>
+                    <div class="mb-3">
+                        <label for="NbrConviveReservation" class="form-label text-primary">Nombre de convives : </label>
+                        <input disabled type="number" class="form-control" id="NbrConviveReservation" placeholder="2">
+                    </div>
+                    <div class="text-center mb-3">
+                        <button type="button" class="btn btn-primary text-white">Valider ma réservation</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Annulation réservation -->
+
+<div class="modal fade" id="AnnulationReservationModal" tabindex="-1" aria-labelledby="AnnulationReservationModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title fs-5" id="AnnulationReservationModal">Annulation de réservation</h2>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <p>Êtes-vous sûr de vouloir annuler ?</p>
+                            <input class="form-check-input" type="radio" name="choixAnnulation" id="ouiAnnulationRadio"
+                                checked>
+                            <label class="form-check-label" for="ouiAnnulationRadio">
+                                Oui
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="choixAnnulation" id="nonAnnulationRadio">
+                            <label class="form-check-label" for="nonAnnulationRadio">
+                                Non
+                            </label>
+                        </div>
+                        <div class="text-center mb-3">
+                            <button type="button" class="btn btn-primary text-white">Confirmer</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
