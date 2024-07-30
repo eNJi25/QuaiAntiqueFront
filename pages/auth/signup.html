@@ -9,25 +9,46 @@
         <div class="mb-3">
             <label for="NomInput" class="form-label text-primary">Nom</label>
             <input type="text" class="form-control" id="NomInput" placeholder="Votre nom">
+            <div class="invalid-feedback">
+                Le nom est obligatoire.
+            </div>
         </div>
         <div class="mb-3">
             <label for="PrenomInput" class="form-label text-primary">Prénom</label>
             <input type="text" class="form-control" id="PrenomInput" placeholder="Votre prénom">
+            <div class="invalid-feedback">
+                Le prénom est obligatoire.
+            </div>
         </div>
         <div class="mb-3">
             <label for="EmailInput" class="form-label text-primary">Email</label>
             <input type="email" class="form-control" id="EmailInput" placeholder="votremail@mail.fr">
+            <div class="invalid-feedback">
+                Le mail n'est pas au bon format.
+            </div>
         </div>
         <div class="mb-3">
             <label for="PasswordInput" class="form-label text-primary">Mot de passe</label>
             <input type="password" class="form-control" id="PasswordInput">
+            <div class="invalid-feedback">
+                Le mot de passe doit contenir au moins 8 caractères, dont au minimum : une lettre majuscule, une lettre
+                minuscule, un chiffre et un
+                caractère spécial.
+            </div>
+            <div class="valid-feedback">
+                Le mot de passe est robuste.
+            </div>
         </div>
         <div class="mb-3">
-            <label for="ValidatePasswordInput" class="form-label text-primary">Validez votre mot de passe</label>
+            <label for="ValidatePasswordInput" class="form-label text-primary">Confirmez votre mot de passe</label>
             <input type="password" class="form-control" id="ValidatePasswordInput">
+            <div class="invalid-feedback">
+                Les mots de passes ne sont pas identiques.
+            </div>
         </div>
         <div class="text-center mb-3">
-            <button type="submit" class="btn btn-primary text-white">Inscription</button>
+            <button type="submit" class="btn btn-primary text-white"
+                id="btn-validation-inscription">Inscription</button>
         </div>
     </form>
     <div class="text-center">
