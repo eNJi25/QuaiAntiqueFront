@@ -5,7 +5,7 @@
 </div>
 
 <div class="container">
-    <div class="text-center mt-3">
+    <div class="text-center mt-3" data-show="admin">
         <button type="button" class="btn btn-primary text-white" data-bs-toggle="modal"
             data-bs-target="#EditionPhotoModal">Ajouter une photo</button>
     </div>
@@ -14,7 +14,7 @@
             <div class="image-card text-white">
                 <img src="../images/galerie/img1.jpg" alt="" class="rounded w-100 ">
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -26,7 +26,7 @@
             <div class="image-card text-white">
                 <img src="../images/galerie/img2.jpg" alt="" class="rounded w-100">
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -38,7 +38,7 @@
             <div class="image-card text-white">
                 <img src="../images/galerie/img3.jpg" alt="" class="rounded w-100 ">
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -50,7 +50,7 @@
             <div class="image-card text-white">
                 <img src="../images/galerie/img4.jpg" alt="" class="rounded w-100">
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -62,7 +62,7 @@
             <div class="image-card text-white">
                 <img src="../images/galerie/img5.jpg" alt="" class="rounded w-100 ">
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -74,7 +74,7 @@
             <div class="image-card text-white">
                 <img src="../images/galerie/img6.jpg" alt="" class="rounded w-100">
                 <p class="titre-image">Titre</p>
-                <div class="action-image-buttons">
+                <div class="action-image-buttons" data-show="admin">
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
                         data-bs-target="#EditionPhotoModal"><i class="bi bi-pencil-square"></i></button>
                     <button type="button" class="btn btn-outline-light" data-bs-toggle="modal"
@@ -84,12 +84,12 @@
         </div>
     </div>
     <div class="text-center mb-3">
-        <a href="#" class="btn btn-primary text-white">Réserver</a>
+        <a href="/reserver" class="btn btn-primary text-white">Réserver</a>
     </div>
 </div>
 
 <!-- Modal Edition -->
- 
+
 <div class="modal fade" id="EditionPhotoModal" tabindex="-1" aria-labelledby="EditionPhotoModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
