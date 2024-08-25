@@ -4,12 +4,14 @@ const inputMail = document.getElementById("EmailInput");
 const inputPassword = document.getElementById("PasswordInput");
 const inputValidatePassword = document.getElementById("ValidatePasswordInput");
 const btnValidation = document.getElementById("btn-validation-inscription");
+const formInscription = document.getElementById("formulaireInscription");
 
 inputNom.addEventListener("keyup", validateForm);
 inputPrenom.addEventListener("keyup", validateForm);
 inputMail.addEventListener("keyup", validateForm);
 inputPassword.addEventListener("keyup", validateForm);
 inputValidatePassword.addEventListener("keyup", validateForm);
+btnValidation.addEventListener("click", inscrireUtilisateur);
 
 function validateForm() {
   const nomOk = validateRequired(inputNom);
@@ -79,4 +81,43 @@ function validateRequired(input) {
     input.classList.add("is-invalid");
     return false;
   }
+}
+
+function inscrireUtilisateur() {
+  let dataForm = new FormData(formInscription);
+
+  let myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/json");
+
+  let raw = JSON.stringify({
+    firstName: dataForm.get("nom"),
+    lastName: dataForm.get("prenom"),
+    email: dataForm.get("email"),
+    password: dataForm.get("mdp"),
+  });
+
+  let requestOptions = {
+    method: "POST",
+    headers: myHeaders,
+    body: raw,
+    redirect: "follow",
+  };
+  fetch(apiUrl + "registration", requestOptions)
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        alert("Erreur lors de l'inscription");
+      }
+    })
+    .then((result) => {
+      alert(
+        "Bravo " +
+          dataForm.get("prenom") +
+          ", vous êtes maintenant inscrit, vous pouvez vous connecter."
+      );
+      document.location.href = "/signin";
+    })
+
+    .catch((error) => console.log("error", error));
 }
