@@ -1,8 +1,7 @@
 const galerieImage = document.getElementById("allImages");
 
 // Réccupérer les informations des images
-let titre =
-  "<img src=x onerror=\"window.location.replace('https://google.com')\"/>";
+let titre = "Oeuf en neige";
 let imgSource = "../images/galerie/img1.jpg";
 
 let monImage = getImage(titre, imgSource);
